@@ -35,16 +35,12 @@ double wurzel(double zahl)
 int main()
 {
     // Messschleife
-    for(int i = 0; i < 100000000; i += 10)
+    for(int i = 0; i < 10000; i += 10)
     {
         clock_t start = clock();
-        // Mehrfach ausführen, um die Auflösung zu erhöhen
-        for(int j = 0; j < 1000; j += 1)
-        {
-
-            double x = i / 100000000;
-                wurzel(x);
-        }
+        double x = i / 10000;
+        for(int j = 0; j < 100000; j += 1)
+            wurzel(x);
         clock_t end = clock();
 
         double runtime = (double)(end - start) ;
