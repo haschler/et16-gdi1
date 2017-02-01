@@ -20,5 +20,38 @@
 //      Alle Elemente kopieren
 //      -> O(n)
 
+// s.o.; Plan ausführen...
+struct STAPEL
+{
+    int* feld;
+    int n;
+} typedef struct STAPEL Stapel;
+
+void neuerStapel(Stapel*& neu)
+{
+    neu = new Stapel;
+    neu->n = 0;
+}
+
+bool stapelLeer(Stapel* stapel)
+{
+    return(stapel->n == 0);
+}
+
+
+// Hauptprogramm
+int main()
+{
+    Stapel* s;
+    neuerStapel(s);    
+    if(stapelLeer(s))
+        cout << "Stapel ist leer" << endl;
+    
+    
+}
+
+
+}
+
 
 
