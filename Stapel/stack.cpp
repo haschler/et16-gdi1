@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 //
 // Umsetzung des ADT Stapel in C++
 //
@@ -47,11 +51,9 @@ int main()
     if(stapelLeer(s))
         cout << "Stapel ist leer" << endl;
     
-    
+    return 0;    
 }
 
-
-}
 
 
 
