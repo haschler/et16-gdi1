@@ -60,6 +60,19 @@ void stapelPush(Stapel* stapel, int zahl)
     stapel->feld = neu;
 }
 
+int stapelPop(Stapel* s)
+{
+    int ergebnis = s->feld[s->n - 1];
+    int* neu = new int[s->n - 1];
+    for(int i = 0; i < s->n - 1; i += 1)
+        neu[i] = s->feld[i];
+    s->n -= 1;
+    delete(s->feld);
+    s->feld = neu;
+    return ergebnis;
+}
+
+
 
 // Hauptprogramm
 int main()
@@ -73,7 +86,8 @@ int main()
     stapelPush(s, 3);
     if(stapelLeer(s))
         cout << "Stapel ist leer" << endl;
-    
+    int zahl = stapelPop(s);
+    cout << zahl << endl;
     return 0;    
 }
 
