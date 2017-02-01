@@ -11,7 +11,9 @@ int main() {
     feld[1] = 7;
     */
     // Feld mit Startwerten
-    int feld[] = {2, 4, 6, 8, 10};
+    int feld[] = {2, 4, 6, 8};
+    cout << sizeof(feld) << "=" << sizeof(int*) << endl;
+    cout << sizeof(int) << endl;
     // bilde die Summe aller Elemente
     // Variable fuer die Summe
     int summe = 0;
